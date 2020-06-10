@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from story_resource.views import Hello
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello/', Hello.as_view(), name='my-view'),
 ]
